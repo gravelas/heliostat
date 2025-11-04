@@ -31,9 +31,11 @@ while (True):
   if (light_level_right == light_level_left):
     pass
   elif (light_level_right > light_level_left):
-    angle -= 1
+    if (angle > 0): 
+      angle -= 1
   elif (light_level_left > light_level_right):
-    angle += 1
+    if (angle < 180):
+      angle += 1
   
   print("LIGHT VALUE: " + str(light_level_center))
   print("RIGHT: " + str(light_level_right))
