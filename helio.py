@@ -5,7 +5,7 @@ import math
 # Pin setup
 pr_l = ADC(26)  # Photoresistor on ADC0 (GPIO 26)
 pr_r = ADC(27)  # Photoresistor on ADC1
-pr_c = ADC(28)
+pr_c = ADC(28)  # Photoresistor on ADC2
 
 # Servo setup
 servo = PWM(Pin(18))
@@ -13,7 +13,7 @@ servo.freq(50)  # 50Hz for servo control
 
 # Servo duty cycle constants (adjust for your servo)
 MIN_DUTY = 1802   # 0 degrees
-MAX_DUTY = 7864 
+MAX_DUTY = 7864   # 180 degrees
 
 angle=90
 
